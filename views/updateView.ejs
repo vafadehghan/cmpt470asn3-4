@@ -1,0 +1,26 @@
+<html>
+
+<head>
+  <title>Update</title>
+  <link rel="stylesheet" type="text/css" href="/stylesheets/style.css">
+
+</head>
+
+<body>
+  <form action="/rects/update/<%=rect[0].id%>" method="POST">
+    <br>
+    <label for="height">Height:</label><br>
+    <input type="text" id="height" name="height" value="<%=rect[0].height %>"><br>
+
+    <label for="width">Width:</label><br>
+    <input type="text" id="width" name="width" value="<%=rect[0].width%>"> <br>
+
+    <label for=" colour">Colour:</label><br>
+    <input type="text" id="colour" name="colour" value="<%=rect[0].colour%>"><br>
+
+    <input type="submit" value="Update Rectangle">
+  </form>
+  <a href="/rects/view">View all rectangles</a>
+</body>
+
+</html>

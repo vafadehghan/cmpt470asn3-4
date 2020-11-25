@@ -1,0 +1,51 @@
+<html>
+
+<head>
+    <title>Rectangles</title>
+    <link rel="stylesheet" type="text/css" href="/stylesheets/style.css">
+</head>
+
+<body>
+    <h1>Welcome to Rectangles</h1>
+    <p>Click on a rectangle to update it</p>
+    <a href="/">
+        <p>Add a Rectangle</p>
+    </a>
+    <table class="hoverTable">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Rectangle</th>
+                <th>Height</th>
+                <th>Width</th>
+                <th>Perimeter</th>
+                <th>Area</th>
+                <th>Delete</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% rects.forEach(function(rect) { %>
+            <tr>
+                <td><%= rect.id %></td>
+                <td>
+                    <svg width="<%=rect.width %>" height="<%=rect.height%>">
+                        <a href="/rects/update/<%=rect.id%>">
+                            <rect type="box" width="<%=rect.width%>" height="<%=rect.height%>"
+                                style="fill:<%= rect.colour %>;" />
+                        </a>
+                    </svg>
+                </td>
+                <td><%= rect.height %></td>
+                <td><%= rect.width %></td>
+                <td><%= 2*(rect.width+rect.height) %></td>
+                <td><%= rect.height*rect.width %></td>
+                <td>
+                    <button onclick="window.location.href='/rects/delete/<%=rect.id%>'">Delete</button>
+                </td>
+            </tr>
+            <% }); %>
+        </tbody>
+    </table>
+</body>
+
+</html>
