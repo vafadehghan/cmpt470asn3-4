@@ -8,7 +8,7 @@ var logger = require('morgan');
 var indexRouter = require('./routes/index');
 var rectsRouter = require('./routes/rects');
 
-const PORT = process.env.PORT || 80
+const PORT = process.env.PORT || 3000
 var app = express();
 
 // view engine setup
