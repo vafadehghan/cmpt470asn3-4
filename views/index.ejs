@@ -7,15 +7,16 @@
 </head>
 
 <body>
+  <h1>Add a rectangles </h1>
   <form action="/rects/add" method="POST">
     <label for="height">Height:</label><br>
-    <input type="text" id="height" name="height"><br>
+    <input type="text" id="height" name="height" required><br>
 
     <label for="width">Width:</label><br>
-    <input type="text" id="width" name="width"> <br>
+    <input type="text" id="width" name="width" required> <br>
 
     <label for="colour">Color:</label><br>
-    <input type="text" id="colour" name="colour"><br>
+    <input type="text" id="colour" name="colour" required><br>
 
     <input type="submit" value="Submit Rectangle">
   </form>
