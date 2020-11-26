@@ -1,11 +1,11 @@
 var mysql = require('mysql');
 var con = mysql.createConnection({
-  host: "localhost",
-  user: "root",
+  host: "asn3-4-db",
+  user: "TESTUSER",
   password: "cmpt470",
-  database: "cmpt470"
+  database: "cmpt470",
+  port : "3306"
 });
-
 
 
 var rectModel = {
